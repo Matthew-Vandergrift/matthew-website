@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { MDXRemote, type MDXRemoteProps } from 'next-mdx-remote/rsc';
 import { highlight } from 'sugar-high';
 import React from 'react';
+import { withAssetBase } from '@/lib/assetBase';
 
 interface TableData {
   headers: string[];
@@ -67,7 +68,22 @@ type RoundedImageProps = Pick<React.ImgHTMLAttributes<HTMLImageElement>, 'classN
 
 function RoundedImage(props: RoundedImageProps) {
   const { src, alt = '', width, height } = props;
-  return <Image src={src} alt={alt} className="rounded-lg" width={width} height={height} />;
+  return (
+    <Image
+      src={withAssetBase(src)}
+      alt={alt}
+      className="rounded-lg"
+      width={width}
+      height={height}
+    />
+  );
+}
+
+function MdxImg(props: React.ImgHTMLAttributes<HTMLImageElement>) {
+  const { src, alt, ...rest } = props;
+  const resolved =
+    typeof src === 'string' ? withAssetBase(src) : src;
+  return <img {...rest} src={resolved} alt={alt ?? ''} />;
 }
 
 interface CodeProps extends React.HTMLAttributes<HTMLElement> {
@@ -120,6 +136,7 @@ const components = {
   h5: createHeading(5),
   h6: createHeading(6),
   Image: RoundedImage,
+  img: MdxImg,
   a: CustomLink,
   code: Code,
   Table,

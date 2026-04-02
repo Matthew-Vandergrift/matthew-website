@@ -1,6 +1,7 @@
 import bibtexParse from 'bibtex-parse-js';
 import Image from 'next/image';
 import { personalInfo } from '@/data/website.config';
+import { withAssetBase } from '@/lib/assetBase';
 import { CustomMDX } from '@/components/mdx';
 
 function authorProcess(authorsStr: string, personalInfoName: string): string {
@@ -76,7 +77,7 @@ export default function Publications({ bibtex }: PublicationsProps) {
               {item.entryTags.award &&
                 (item.entryTags.award === 'Honorable Mention' ? (
                   <Image
-                    src='/honor.jpg'
+                    src={withAssetBase('/honor.jpg')}
                     alt='Honorable Mention'
                     width={20}
                     height={20}
@@ -84,7 +85,7 @@ export default function Publications({ bibtex }: PublicationsProps) {
                   />
                 ) : (
                   <Image
-                    src='/best.jpg'
+                    src={withAssetBase('/best.jpg')}
                     alt='Honorable Mention'
                     width={20}
                     height={20}

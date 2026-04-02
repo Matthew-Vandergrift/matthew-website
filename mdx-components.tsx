@@ -1,4 +1,6 @@
+import type { ImgHTMLAttributes } from 'react';
 import type { MDXComponents } from 'mdx/types';
+import { withAssetBase } from '@/lib/assetBase';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -27,6 +29,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {...props}
       />
     ),
+    img: (props: ImgHTMLAttributes<HTMLImageElement>) => {
+      const src =
+        typeof props.src === 'string' ? withAssetBase(props.src) : props.src;
+      return <img {...props} src={src} alt={props.alt ?? ''} />;
+    },
     ...components,
   };
 }

@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   ...(isGithubPages ? { output: "export" as const } : {}),
   ...(basePath ? { basePath, assetPrefix: `${basePath}/` } : {}),
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath ?? "",
+  },
   images: {
     unoptimized: isGithubPages,
   },

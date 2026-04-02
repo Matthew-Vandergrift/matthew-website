@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { withAssetBase } from "@/lib/assetBase";
 
 interface ProjectCardProps {
   title: string;
@@ -31,7 +32,7 @@ export default function ProjectCard({
           <p className="text-neutral-600 dark:text-neutral-300">{date}</p>
         </div>
         <Image
-          src={img}
+          src={withAssetBase(img)}
           width={200}
           height={200}
           alt="project image"

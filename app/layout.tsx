@@ -1,6 +1,7 @@
 import { fontStyle } from '@/data/website.config';
 import './globals.css';
 import { websiteInfo } from '@/data/website.config';
+import { withAssetBase } from '@/lib/assetBase';
 import Header from '@/components/Header';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
@@ -14,7 +15,7 @@ export const metadata = {
   title: websiteInfo.title,
   description: websiteInfo.description,
   icons: {
-    icon: '/lrc.png',
+    icon: withAssetBase('/lrc.png'),
   },
 };
 
