@@ -63,7 +63,7 @@ export const navigations: NavigationItem[] = [
 export const homepageSection: HomepageSection = {
   AboutSection: true,
   NewsSection: true,
-  SelectedPublicationsSection: true,
+  SelectedPublicationsSection: false,
   // ProjectSection: true,
 };
 
