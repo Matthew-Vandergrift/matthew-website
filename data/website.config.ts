@@ -33,13 +33,13 @@ export type FontStyle = "sans" | "serif" | "mono";
 
 export const personalInfo: PersonalInfo = {
   name: "Matthew Vandergrift",
-  profilePicture: "/headshot.jpg", //optional
+  profilePicture: "/headshot.png", //optional — path must match a file in /public
   role: "Graduate Student",
   university: "RLAI at University of Alberta",
   universityWebsite: "http://rlai.ualberta.ca",
   socialMedia: [
     { name: "Linkedin", url: "https://www.linkedin.com/in/matthew-vandergrift-10992428b/" },
-    { name: "BlueSky", url: "https://bsky.app/profile/matt-sl2z.bsky.social" },
+    { name: "Bluesky", url: "https://bsky.app/profile/matt-sl2z.bsky.social" },
     {
       name: "GitHub",
       url: "https://github.com/Matthew-Vandergrift",
@@ -54,7 +54,6 @@ export const websiteInfo: WebsiteInfo = {
 };
 
 export const navigations: NavigationItem[] = [
-  { name: "Projects", route: "/projects" },
   { name: "Publications", route: "/publications" },
   { name: "News", route: "/news" },
   { name: "CV", route: "/cv/mvandergrift_cv_2026.pdf" },
@@ -64,7 +63,7 @@ export const homepageSection: HomepageSection = {
   AboutSection: true,
   NewsSection: true,
   SelectedPublicationsSection: false,
-  // ProjectSection: true,
+  ProjectSection: false,
 };
 
 export const fontStyle: FontStyle = "sans"; // "sans" | "serif" | "mono"

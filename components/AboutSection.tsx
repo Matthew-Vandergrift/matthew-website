@@ -47,7 +47,7 @@ export default function AboutSection() {
                       <RiGithubFill size={16} />
                     ) : social.name === 'Twitter' ? (
                       <RiTwitterXLine size={16} />
-                    ) : social.name === 'Bluesky' ? (
+                    ) : social.name === 'Bluesky' || social.name === 'BlueSky' ? (
                       <RiBlueskyLine size={16} />
                     ) : social.name === 'Google Scholar' ? (
                       <RiGoogleFill size={16} />
@@ -80,7 +80,7 @@ export default function AboutSection() {
           />
         )}
       </div>
-      <article className='flex flex-col gap-2 text-pretty'>
+      <article className='prose max-w-none flex flex-col gap-2 text-pretty'>
         <AboutMd />
       </article>
     </section>

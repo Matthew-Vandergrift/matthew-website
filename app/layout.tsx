@@ -13,6 +13,9 @@ const fontClasses = {
 export const metadata = {
   title: websiteInfo.title,
   description: websiteInfo.description,
+  icons: {
+    icon: '/lrc.png',
+  },
 };
 
 export default function RootLayout({
