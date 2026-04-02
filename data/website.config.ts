@@ -32,35 +32,33 @@ export interface HomepageSection {
 export type FontStyle = "sans" | "serif" | "mono";
 
 export const personalInfo: PersonalInfo = {
-  name: "Hiroshi Ishii",
-  profilePicture: "/profile.jpg", //optional
-  role: "Professor",
-  university: "MIT Media Lab",
-  universityWebsite: "https://www.zju.edu.cn/",
+  name: "Matthew Vandergrift",
+  profilePicture: "/headshot.jpg", //optional
+  role: "Graduate Student",
+  university: "RLAI at University of Alberta",
+  universityWebsite: "http://rlai.ualberta.ca",
   socialMedia: [
-    { name: "Email", url: "https://linkedin.com" },
-    { name: "Twitter", url: "https://twitter.com/anxndsgn" },
+    { name: "Linkedin", url: "https://www.linkedin.com/in/matthew-vandergrift-10992428b/" },
+    { name: "BlueSky", url: "https://bsky.app/profile/matt-sl2z.bsky.social" },
     {
       name: "GitHub",
-      url: "https://github.com/anxndsgn/academic-homepage-template",
+      url: "https://github.com/Matthew-Vandergrift",
     },
-    { name: "LinkedIn", url: "https://linkedin.com" },
-    { name: "ORCID", url: "https://orcid" },
-    { name: "Google Scholar", url: "https://scholar.google.com" },
+    { name: "Google Scholar", url: "https://scholar.google.ca/citations?user=y7VZxgUAAAAJ&hl=en" },
   ],
 };
 
 export const websiteInfo: WebsiteInfo = {
   title: personalInfo.name,
-  description: "HCI researcher",
+  description: "RL researcher",
 };
 
 export const navigations: NavigationItem[] = [
   { name: "Projects", route: "/projects" },
   { name: "Publications", route: "/publications" },
   { name: "News", route: "/news" },
-  { name: "CV", route: "/cv/cv.pdf" },
-];
+  { name: "CV", route: "/cv/mvandergrift_cv_2026.pdf" },
+]
 
 export const homepageSection: HomepageSection = {
   AboutSection: true,

@@ -8,6 +8,7 @@ import {
   RiLinkedinBoxFill,
   RiTwitterXLine,
   RiGoogleFill,
+  RiBlueskyLine,
 } from '@remixicon/react';
 import { Button } from './ui/button';
 
@@ -46,6 +47,8 @@ export default function AboutSection() {
                       <RiGithubFill size={16} />
                     ) : social.name === 'Twitter' ? (
                       <RiTwitterXLine size={16} />
+                    ) : social.name === 'Bluesky' ? (
+                      <RiBlueskyLine size={16} />
                     ) : social.name === 'Google Scholar' ? (
                       <RiGoogleFill size={16} />
                     ) : social.name === 'ORCID' ? (
